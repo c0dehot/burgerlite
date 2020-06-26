@@ -5,13 +5,15 @@ const orm = require( '../config/orm' )
 //     { id: 1, name: "McBurger", devoured: true },
 // ]
 
-function getAvailable(){
-    return orm.selectAll().filter( burger=>burger.devoured == false )
+async function getAvailable(){
+    const burgerList = await orm.selectAll()
+    return burgerList.filter( burger=>burger.devoured == false )
     // return burgers.filter( burger=>burger.devoured == false )
 }
 
-function getDevoured(){
-    return orm.selectAll().filter( burger=>burger.devoured == true )
+async function getDevoured(){
+    const burgerList = await orm.selectAll()
+    return burgerList.filter( burger=>burger.devoured == true )
     // return burgers.filter( burger=>burger.devoured == true )
 }
 

@@ -3,7 +3,7 @@
                 <!-- available  -->
                 {{#each available}}
                 <div class="btn-toolbar mb-3">
-                    <div class="input-group-text">{{name}}</div>
+                    <div class="input-group-text">{{burger_name}}</div>
 
                     <div>
                         <a href="/devour/{{id}}" class="btn btn-secondary">Devour-It!</a>
@@ -16,7 +16,7 @@
                 <!-- devoured burgers -->
                 {{#each devoured}}
                 <div class="alert alert-secondary">
-                    {{name}}
+                    {{burger_name}}
                 </div>
                 {{/each}}
             </div>
